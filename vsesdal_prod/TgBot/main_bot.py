@@ -181,7 +181,7 @@ def executor_orders(call):
 
 @bot.callback_query_handler(func=lambda call: call.data == 'На подтверждение')
 def pending_orders(call):
-
+    pass
 
 
 @bot.callback_query_handler(func=lambda call: call.data in [i[2] for i in list(Orders.objects
