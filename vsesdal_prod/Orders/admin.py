@@ -6,13 +6,14 @@ class OrdersAdmin(admin.ModelAdmin):
     list_display = [
         'id_order',
         'title',
+        'categories',
         'price',
         'text',
         'files',
         'finish_file',
         'deadline',
         'antiplug',
-        'categories',
+        'message_from_customer',
         'status',
         'date',
     ]

@@ -12,6 +12,7 @@ class ExecutorAdmin(admin.ModelAdmin):
         'balance',
         'orders_finish',
         'orders_in_progress',
+        'orders_pending',
         'pay_history',
     ]
 

@@ -43,6 +43,14 @@ class Executor(models.Model):
         blank=True,
         default='',
     )
+
+    orders_pending = models.CharField(
+        verbose_name='Заказы ожидающие подтверждения',
+        max_length=10000000000000000000000000,
+        blank=True,
+        default=''
+    )
+
     pay_history = models.CharField(
         verbose_name='История платежей',
         max_length=10000000000000000000000000,

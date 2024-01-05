@@ -47,6 +47,7 @@ class Orders(models.Model):
     antiplug = models.TextField(
         verbose_name='Антиплагиат',
         max_length=32,
+        blank=True,
     )
 
     categories = models.TextField(
@@ -67,6 +68,13 @@ class Orders(models.Model):
     finish_file = models.FileField(
         verbose_name='Законченные файлы',
         upload_to=finish_path,
+        default='',
+        blank=True,
+    )
+
+    message_from_customer = models.CharField(
+        verbose_name='Сообщение от заказчика',
+        max_length=10000000000000,
         default='',
         blank=True,
     )
