@@ -1,0 +1,2 @@
+2024/01/12-19:05:47.726 7860 Creating DB /home/jora/snap/chromium/common/chromium/Profile 1/IndexedDB/https_developer.mozilla.org_0.indexeddb.leveldb since it was missing.
+2024/01/12-19:05:47.734 7860 Reusing MANIFEST /home/jora/snap/chromium/common/chromium/Profile 1/IndexedDB/https_developer.mozilla.org_0.indexeddb.leveldb/MANIFEST-000001

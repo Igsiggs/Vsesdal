@@ -43,7 +43,7 @@ def help(call):
     back_page = 'send_welcome(call.message)'
     try:
         for i in range(10):
-            bot.delete_message(call.message.chat.id, call.message.id-i)
+            bot.delete_message(call.message.chat.id, call.message.id - i)
     except:
         markup = Keyboa(items=['Назад'], items_in_row=1, copy_text_to_callback=True)
         bot.send_contact(call.message.chat.id, '+79959069468', 'Helper', reply_markup=markup())
@@ -282,7 +282,8 @@ def list_id(call, b_arg=False):
     try:
         b = [0, 0, 0]
         print('**************')
-        c = Executor.objects.all().values_list('orders_in_progress', 'orders_pending', 'orders_finish', ).get(tg_name=call.from_user.username) #))]))
+        c = Executor.objects.all().values_list('orders_in_progress', 'orders_pending', 'orders_finish', ).get(
+            tg_name=call.from_user.username)  # ))]))
         print(c)
 
         for index, i in enumerate(c):
@@ -296,8 +297,8 @@ def list_id(call, b_arg=False):
     except Exception as ex:
         print(ex)
         b = list(map(int, [0 if i == '' else i for i in list(
-                (Executor.objects.all().values_list('orders_in_progress', 'orders_pending', 'orders_finish', )
-                 .get(tg_name=call.from_user.username)))]))
+            (Executor.objects.all().values_list('orders_in_progress', 'orders_pending', 'orders_finish', )
+             .get(tg_name=call.from_user.username)))]))
     print(b)
     for i in b:
         print(i)
@@ -307,7 +308,8 @@ def list_id(call, b_arg=False):
             elif len(i) != 0:
                 for g in i:
                     f.append(g)
-        else: f.append(i)
+        else:
+            f.append(i)
     # print(f)
     a = list(Orders.objects.all().values_list().filter(id_order__in=f))
     if b_arg:
@@ -382,7 +384,6 @@ def order_in_work(call):
 def order_complete(call):
     global back_page
     back_page = 'orders_in_progress(call)'
-
     try:
         val = list(OptionsTgBot.objects.all().values_list('values').get(options='Страница Выполнения'))
         # print(val)
@@ -425,9 +426,7 @@ def get_file(message):
             executor.orders_pending += ',{id}'.format(id=complete_order)
         else:
             pass
-
         ord = executor.orders_in_progress
-
         if ',' in ord:
             executor.orders_in_progress = ord.split(',').remove(complete_order)
         else:
@@ -442,5 +441,5 @@ def get_file(message):
             markup = Keyboa(items=['Кабинет', 'Назад'], items_in_row=2, copy_text_to_callback=True)
             bot.send_message(message.chat.id, 'Спасибо, задание отправлено заказчику', reply_markup=markup())
         # print(executor.orders_in_progress)
-    except Exception as ex:
+    except Excepetion as ex:
         print(ex)

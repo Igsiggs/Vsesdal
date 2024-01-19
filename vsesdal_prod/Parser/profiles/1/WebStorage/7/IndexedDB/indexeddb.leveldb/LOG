@@ -1,0 +1,7 @@
+2024/01/13-02:15:00.743 7864 Reusing MANIFEST /home/jora/snap/chromium/common/chromium/Profile 1/WebStorage/7/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/01/13-02:15:00.744 7864 Recovering log #3
+2024/01/13-02:15:00.744 7864 Reusing old log /home/jora/snap/chromium/common/chromium/Profile 1/WebStorage/7/IndexedDB/indexeddb.leveldb/000003.log 
+2024/01/13-02:26:15.329 7861 Level-0 table #5: started
+2024/01/13-02:26:15.333 7861 Level-0 table #5: 18820 bytes OK
+2024/01/13-02:26:15.336 7861 Delete type=0 #3
+2024/01/13-02:26:15.336 7861 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
