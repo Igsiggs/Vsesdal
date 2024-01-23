@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hz##1ud2xgbfh&$7gt=#b9lbh*85$t%a#v4x)^smc*60x*5h4$'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,6 +118,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Настройки телеграм бота
 
-# BOT_TOKEN = '6454239858:AAEU2M5AkNYLbx0SK0ynzzZLzEbCJtOVC0U'
-BOT_TOKEN = '6221983277:AAECcmwlgH5MbIEJIq5xCMS_2R7nfP9P3gE'
+# BOT_TOKEN = ''
+BOT_TOKEN = ''
 
