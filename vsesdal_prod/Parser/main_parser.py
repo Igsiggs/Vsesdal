@@ -18,10 +18,10 @@ URL = 'https://vsesdal.com/cabinet/'
 
 def main():
     options = webdriver.ChromeOptions()
-    options.add_argument("--user-data-dir=/home/jora/.config/google-chrome") #Path to your chrome profile
+    options.add_argument("--user-data-dir=") #Path to your folder with chromes profile
     options.add_argument("--profile-directory=Profile 2") #Path to your chrome profile
     options.add_argument("start-maximized")
-    service = webdriver.ChromeService(executable_path='/opt/google/chrome/google-chrome')
+    service = webdriver.ChromeService(executable_path='') #Path to chrome executable file
 
 
     driver = uc.Chrome(headless=True ,service=service,options=options)
